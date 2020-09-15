@@ -13,7 +13,7 @@
     - client_name: str, given client name
 - private endpoint
     /getQuote, /getSignedQuote, /transactionSubmitted requires authentication. Please refer to the below example.
-[auth example(in Python)](https://github.com/onebit-quant/dealerMaker-API/blob/master/signature_example.py)
+[auth example(in Python)](https://github.com/OneBitQuant/dexMM/blob/master/signature_example.py)
 
 ## Endpoints
 
