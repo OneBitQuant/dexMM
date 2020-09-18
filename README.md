@@ -109,3 +109,8 @@ returns the submitted transaction
     - nonce = nonce of the broadcasted transaction
 - response :
     - result : confirmed
+```
+    {
+        'result': 'confirmed'
+    }
+```
