@@ -59,6 +59,7 @@ get the signed order for the request _input, output and amount.
     - _input
     - output
     - amount
+    - sender: taker address
 - response :
     - result : 1（return success), 0（return failure)
     - quote_id": request_params for /transactionSubmitted endpoint
@@ -105,7 +106,6 @@ returns the submitted transaction
 - request_params :
     - quoteid: quoteid returns from /getSignedQuote endpoint
     - transactionHash: transaction hash of the broadcasted transaction
-    - sender: taker address
     - nonce = nonce of the broadcasted transaction
 - response :
     - result : confirmed
