@@ -17,6 +17,22 @@
 
 ## Endpoints
 
+### /getSupportTokens
+- request_params : None
+- response :
+    - result : 1（return success), 0（return failure)
+    - supportTokens: list of support tokens
+```
+    {
+        'result': 1,
+        'supportTokens': [
+            ['usdc', '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'],
+            ['usdt', '0xdAC17F958D2ee523a2206206994597C13D831ec7'],
+            ['weth', '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2']
+        ]
+     }
+```
+
 ### /getQuote
 
 get the reference price for a given pair with amount and chunks, returns the reference price for each chunk.
@@ -87,8 +103,8 @@ get the signed order for the request _input, output and amount.
        'takerAddress': '0x5316af395abaaabcbc06682eff19d9dac92838eb',
        'feeRecipientAddress': '0x0000000000000000000000000000000000000000',
        'senderAddress': '0x0000000000000000000000000000000000000000',
-       'makerAssetAmount': 36944866,
-       'takerAssetAmount': 100000000000000000,
+       'makerAssetAmount': '36944866',
+       'takerAssetAmount': '100000000000000000',
        'makerFee': 0,
        'takerFee': 0,
        'expirationTimeSeconds': 1600162840,
