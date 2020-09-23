@@ -130,3 +130,34 @@ returns the submitted transaction
         'result': 'confirmed'
     }
 ```
+
+## Exceptions
+
+### NoPrivateKey
+Missing private key
+error code : NoPrivateKey
+error msg : client name
+
+### AuthFailed
+Authentication failed
+error code : AuthFailed
+error msg : signature invalid / incorrect api key / TIME invalid
+
+### TokenNotSupported
+input or output token is not supported
+error code : TokenNotSupported
+error msg : _input/ output token
+
+### SystemError
+error code : SystemError
+error msg : System risk breach! / client is disabled!
+
+### Blacklist
+Sender address is in blacklist
+error code : Blacklist
+error msg : sender
+
+### InsufficientBal
+Insufficient Balance for output token
+error code : InsufficientBal
+error msg : output
