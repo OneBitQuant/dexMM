@@ -33,6 +33,39 @@
      }
 ```
 
+### /getQuoteForAllPairs
+
+get the reference price for all support pair with different amounts
+
+- request_params : None
+- response :
+    - result : 1（return success), 0（return failure)
+    - price_list
+    - time
+```
+    {
+         'result': 1,
+         'price_list': {
+             'eth_usdc': [
+                   [50, 415.23475892844095],
+                   [100, 414.81952416951253],
+                   [200, 414.40428941058406],
+                   [300, 413.98905465165564],
+                   [400, 413.5738198927272],
+                   [500, 413.15858513379874]
+               ],
+              'usdc_eth': [
+                   [20000, 0.0024309196953347977],
+                   [30000, 0.0024284887756394627],
+                   [40000, 0.002426057855944128],
+                   [50000, 0.002422411476401126]
+               ]
+           },
+         'time': 1603381227.7482014
+     }
+
+```
+
 ### /getQuote
 
 get the reference price for a given pair with amount and chunks, returns the reference price for each chunk.
