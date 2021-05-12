@@ -113,38 +113,25 @@ get the signed order for the request _input, output and amount.
 - response :
     - result : 1（return success), 0（return failure)
     - quote_id": request_params for /transactionSubmitted endpoint
-    - order_hash
+    - order_dict
     - order_signature
-    - makerAddress
-    - takerAddress
-    - feeRecipientAddress
-    - senderAddress
-    - makerAssetAmount
-    - takerAssetAmount
-    - makerFee
-    - takerFee"
-    - expirationTimeSeconds
-    - salt
-    - makerAssetData
-    - takerAssetData
+
 ```
     {
        'result': 1,
-       'quote_id': '1efe85de-f736-11ea-99d6-0a039777dd60',
-       'order_hash': '0x52b5714fedd68bf95e9084e502d29e8550e4d80d9669e544178dfc0060e3247d',
+       'order_dict': { 
+            "maker": makerAddress,
+            "taker": takerAddress,
+            "makerAmount": 1,
+            "takerAmount": 1,
+            "makerToken": '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+            "takerToken": '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+            "txOrigin": sender,
+            "pool": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "expiry": expirationTimeSeconds,
+            "salt": salt
+        },
        'order_signature': '0x8802d92289cffc1281c1dd9105d57e7822ac15eb14de7357a9386b4b12277c5f37f89ec71e89390c4c3c7ed7c60fbb8c939b28d43e951b7f7f0ea64aadb3cf381c',
-       'makerAddress': '0x0726AF16Fb5FB2D6C351B7119f8E54b5cBE1E175',
-       'takerAddress': '0x5316af395abaaabcbc06682eff19d9dac92838eb',
-       'feeRecipientAddress': '0x0000000000000000000000000000000000000000',
-       'senderAddress': '0x0000000000000000000000000000000000000000',
-       'makerAssetAmount': '36944866',
-       'takerAssetAmount': '100000000000000000',
-       'makerFee': 0,
-       'takerFee': 0,
-       'expirationTimeSeconds': 1600162840,
-       'salt': 1600162240852,
-       'makerAssetData': '0xf47261b0000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
-       'takerAssetData': '0xf47261b0000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'
      }
 ```
 
