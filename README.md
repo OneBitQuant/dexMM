@@ -201,3 +201,7 @@ Sender address is in blacklist
 Insufficient Balance for output token
 - error code : InsufficientBal
 - error msg : output
+
+### SignOrderFailed
+
+Signature did not pass getRfqOrderRelevantState
